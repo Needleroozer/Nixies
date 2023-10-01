@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "nixies-us.mod")(type "KiCad")(uri "${KIPRJMOD}/../Eagle-and-KiCAD-Nixie-Libs/nixies-us.mod.pretty")(options "")(descr ""))
+)
