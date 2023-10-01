@@ -1,0 +1,12 @@
+(module nixies-us-IN-6 (layer F.Cu) (tedit 00200000)
+  (attr virtual)
+  (fp_text reference >NAME (at -0.3175 3.81 180) (layer F.SilkS)
+    (effects (font (size 1.27 1.27) (thickness 0.1016)))
+  )
+  (fp_circle (center 0 0) (end 0 -2.55778) (layer F.SilkS) (width 0.254))
+  (pad A thru_hole circle (at -1.5875 0) (size 1.30556 2.61366) (layers *.Cu B.Mask F.Mask))
+  (pad K thru_hole circle (at 1.58496 0) (size 1.30556 2.61366) (layers *.Cu B.Mask F.Mask))
+  (fp_text user "nixies-us.mod[566]" (at 0 4.81) (layer Cmts.User) hide
+    (effects (font (size 0.4 0.4) (thickness 0.1)))
+  )
+)
