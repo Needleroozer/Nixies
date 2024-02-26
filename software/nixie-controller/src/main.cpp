@@ -49,13 +49,15 @@ void setup()
 
 void loop()
 {
-    uint8_t numbers[] = {7, 3, 3, 1};
+    uint8_t numbers[] = {7, 10, 9, 10};
     for (int i=0; i<4; ++i)
     {
-        ENABLE_ANODE(i);
+        if (numbers[i] < 10) ENABLE_ANODE(i); // we get weird anode ghosting across digits otherwise - may just be the breadboard
+        
         ENABLE_CATHODE(numbers[i]);
-        set_dp(i%4);
-        delayMicroseconds(200);
+        set_dp(0);
+
+        delay(1); //still has anode ghosting; probably need to mess with anode resistors
 
         //prevent ghosting onto the next number
         DISABLE_CATHODES(); 
