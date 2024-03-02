@@ -192,6 +192,7 @@ ISR(USI_OVERFLOW_vect)
 			USI_I2C_Slave_State = USI_SLAVE_SEND_DATA_ACK_CHECK;
 			USI_SET_SDA_INPUT();
 			USISR = USI_SLAVE_COUNT_ACK_USISR;
+			USIDR = 0;
 			break;
 
 		/////////////////////////////////////////////////////////////////////////
