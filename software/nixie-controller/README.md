@@ -57,3 +57,11 @@ OSError: [Errno 19] No such device
 ```
 Interestingly, this is equally disastrous when running the ATTiny from 5V and 3.3V - so it's possibly something 
 stupid that the ATTiny is doing with clock-stretching. Or a pullup problem. Time to find a scope I guess.
+
+...scope poking indicates that pullups are fine, as are 3V3 vs. 5V logic levels. Turns out that we can also clock up to 100kHz just fine; the problem is that the TinyWireSio code is just too jank.
+
+Let's try using a different library before giving up and writing it from scratch on our own.  
+Sourced from:
+https://github.com/CalcProgrammer1/Stepper-Motor-Controller/tree/master/UnipolarStepperDriver
+
+With modifications as per the Issues page.
